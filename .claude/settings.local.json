@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "additionalDirectories": [
+      "c:\\Users\\thela\\OneDrive\\Escritorio\\Proyectos\\ERP ELEAM\\.claude"
+    ],
+    "allow": [
+      "Bash(npx tsc *)"
+    ]
+  }
+}

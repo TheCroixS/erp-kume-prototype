@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@media print {
+  /* Ocultar sidebar y elementos de navegación */
+  nav, aside, .no-print, button, [role="navigation"] {
+    display: none !important;
+  }
+  /* Expandir contenido al ancho completo */
+  .pl-64 { padding-left: 0 !important; }
+  main { padding: 0 !important; }
+  /* Asegurar fondo blanco */
+  body, * {
+    background: white !important;
+    color: black !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  /* Salto de página antes de secciones importantes */
+  .page-break { page-break-before: always; }
+  /* Bordes visibles en tablas */
+  table, th, td { border: 1px solid #ccc !important; }
+  /* Evitar saltos en medio de bloques */
+  .no-break { page-break-inside: avoid; }
+}
